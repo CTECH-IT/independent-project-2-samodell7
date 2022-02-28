@@ -1,1 +1,55 @@
-/* Put your CSS here */
+body {
+    background: rgb(176, 204, 255);
+}
+
+.body-text {
+    color: black;
+    background-color: rgb(255, 250, 250);
+    padding-left: .4cm;
+    margin-left: 2cm;
+    margin-right: 2cm;
+}
+
+.page-title {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.image-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.thumbnail-array {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-between;
+    list-style: none;
+
+    overflow-x: auto;
+    padding: 5;
+}
+
+.thumbnail-item {
+    border: 1px solid rgb(241, 240, 240);
+    border: 1px solid rgba(153, 150, 150, 0.8);
+    display: inline-block;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.thumbnail-image {
+    display: block;
+    width: 100%
+}
+
+.logo-image {
+    width: 250px;
+    center
+    
+}
