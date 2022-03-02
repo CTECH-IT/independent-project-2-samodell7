@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'KalamRegular';
+	src: url('./KalamRegular.eot');
+	src: local('KalamRegular'), url('./KalamRegular.woff') format('woff'), url('./KalamRegular.ttf') format('truetype');
+   
+
+}
+
 body {
     background: rgb(176, 204, 255);
 }
@@ -8,6 +16,7 @@ body {
     padding-left: .4cm;
     margin-left: 2cm;
     margin-right: 2cm;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .change-text {
     color: black;
@@ -15,6 +24,7 @@ body {
     padding-left: .4cm;
     margin-left: 2cm;
     margin-right: 2cm;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .page-title {
@@ -24,6 +34,8 @@ body {
     text-transform: uppercase;
     margin-left: 20%;
     margin-right: 20%;
+    font-family: helloregular;
+    text-shadow: 100%;
 }
 
 .image-content {
