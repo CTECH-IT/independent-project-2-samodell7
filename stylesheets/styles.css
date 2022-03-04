@@ -1,9 +1,19 @@
+@font-face {
+    font-family: Hello;
+    src: url(fonts/ChicagoRegular-8MYPn.otf);
+}
+
+@font-face {
+    font-family: body;
+    src: url(fonts/AlishiaMekayla-yw5o5.otf);
+}
 
 body {
     background: rgb(176, 204, 255);
 }
 
 .body-text {
+    font-family: body;
     color: black;
     background-color: rgb(255, 250, 250);
     padding-left: .4cm;
@@ -11,13 +21,14 @@ body {
     margin-right: 2cm;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
-.change-text {
+.text {
     color: black;
     background-color: rgb(255, 250, 250);
-    padding-left: .4cm;
     margin-left: 2cm;
-    margin-right: 2cm;
+
     font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    
 }
 
 .page-title {
@@ -26,10 +37,19 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin-left: 20%;
+    padding-top: .5%;
     margin-right: 20%;
-    font-family: helloregular;
+    font-size: 300%, 300%, 400%;
+    font-family: hello;
     text-shadow: 100%;
 }
+ .main{
+     flex: 1 1 ;
+     flex-grow: 4;
+     display: flex;
+     display: inline-block;
+     
+ }
 
 .image-content {
     flex: 1 1 auto;
@@ -49,16 +69,41 @@ body {
 }
 
 .thumbnail-item {
-    border: 1px solid rgb(241, 240, 240);
-    border: 1px solid rgba(153, 150, 150, 0.8);
+    border: 3px solid rgb(241, 240, 240);
+    border: 3px solid rgba(153, 150, 150, 0.8);
     display: inline-block;
     height: 200px;
+    padding-left: -.2cm;
+    transition: transform 140ms ease-in-out
+}
 
+
+
+.thumbnail-item:hover {
+    transform: scale(.9);
+    transition: transform 400ms ease-out;
 }
 
 .thumbnail-image {
     display: block;
     height: 100%
+}
+
+
+.detail-container {
+    flex: 1 1 auto;
+    display: flex;
+ 
+}
+
+.detail-frame {
+    position: absolute;
+    text-align: center;
+}
+
+.thumbnail-title {
+    background-color: rgb(241, 240, 240);
+    list-style: none
 }
 
 

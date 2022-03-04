@@ -1,10 +1,14 @@
-const TEXT_INFO_SELECTOR = '[data-image-role="title"]';
+const TEXT_INFO_SELECTOR = '[data-image-role="target"]';
+const PIC_SELECT = '[data-image-role="location"]';
 const PIC_LINK = '[data-image-role="select"]';
+const FRAME_SELECT = '[data-image-role="frame"]'
+const PIC_INFO = '[data-image-role="target"]';
 const INFORMATION = '[data-image-role="information"]';
-const HIDE = 'hidden-detail';
+const HIDDEN = 'hidden-detail';
+const CLICKED = 'clicked';
 
-function Details(infoText) {
-    'use strict';
+function setDetails(infoText) {
+
     let detailTitle= document.querySelector(TEXT_INFO_SELECTOR);
     detailTitle.textContent = infoText;
 }
@@ -16,32 +20,37 @@ function picText(pic){
 
 function DetailsFromPic(pic) {
     'use strict';
-    Details(picText(pic));
+    setDetails(picText(pic));
 }
 
-function clickedPic(pic) {
+function clickedPic(picx) {
     'use strict';
-    pic.addEventListener('click', function(event){
+    picx.addEventListener('click', function(event){
         event.preventDefault();
-        DetailsFromPic(pic);
-        showDetails
+        DetailsFromPic(picx);
+    
+    });
+}
+
+function mouseClickHandler() {
+    'use strict';
+    document.body.addEventListener('keyup', function(event) {
+        event.preventDefault();
     });
 }
 
 function getPicArray () {
     'use strict';
-    let pics = document.querySelectorAll(TEXT_INFO_SELECTOR);
+    let pics = document.querySelectorAll(PIC_LINK);
     let picArray= [].slice.call(pics);
     return picArray;
 }
 
-
-function mouseClickHandler() {
-    'use strict';
-    document.body.addEventListener('keyup', function(event) {
-        preventDefault();
-    });
+function hide() {
+    'use strict'
+    document.body.classList.add(HIDDEN);
 }
+
 
 function initialzeEvent() {
     'use strict';
